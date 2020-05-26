@@ -8,4 +8,8 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
+  api.render({
+    './src/Test.vue': './templates/test.vue'
+  })
+
 }
