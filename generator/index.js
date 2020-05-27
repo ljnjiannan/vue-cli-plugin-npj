@@ -1,8 +1,7 @@
 var fs = require("fs");
 var path = require('path')
 
-var requestDir = path.resolve("./","templates/request")
-console.log(requestDir)
+// var requestDir = path.resolve("./","templates/request")
 
 var renderDir = {
   './public/index.html': './templates/public/index.html',
@@ -10,14 +9,17 @@ var renderDir = {
   './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js',
   './src/main.js': './templates/main.js',
   './src/conf.js': './templates/conf.js',
+  'src/request/axiosUtil.js': 'templates/request/axiosUtil.js',
+  'src/request/index.js': 'templates/request/index.js',
+  'src/request/urls.js': 'templates/request/urls.js'
 }
 
-var requestList = fs.readdirSync(requestDir);
-for (var item of requestList) {
-  var tarFile = path.join('./src/request',item)
-  var srcFile = path.join(requestDir,item)
-  renderDir[tarFile] = srcFile
-}
+// var requestList = fs.readdirSync(requestDir);
+// for (var item of requestList) {
+//   var tarFile = path.join('./src/request',item)
+//   var srcFile = path.join(requestDir,item)
+//   renderDir[tarFile] = srcFile
+// }
 
 module.exports = (api, options, rootOptions) => {
   // 修改 `package.json` 里的字段
