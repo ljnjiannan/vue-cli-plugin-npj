@@ -9,7 +9,6 @@ var renderDir = {
   './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js',
   './src/main.js': './templates/main.js',
   './src/conf.js': './templates/conf.js',
-  'src/request/axiosUtil.js': 'templates/request/axiosUtil.js',
   'src/request/index.js': 'templates/request/index.js',
   'src/request/urls.js': 'templates/request/urls.js'
 }
