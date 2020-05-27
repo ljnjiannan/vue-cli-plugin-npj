@@ -1,7 +1,8 @@
 var fs = require("fs");
 var path = require('path')
 
-var requestDir = "./templates/request"
+var requestDir = path.resolve("./","templates/request")
+console.log(requestDir)
 
 var renderDir = {
   './public/index.html': './templates/public/index.html',
