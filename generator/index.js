@@ -6,6 +6,9 @@ module.exports = (api, options, rootOptions) => {
       "lodash": "^4.17.15",
       "axios": "^0.19.2"
     },
+    devDependencies: {
+      "clean-webpack-plugin": "^3.0.0",
+    },
     scripts: {
       "dll": "webpack -p --progress --config ./webpack.dll.conf.js"
     }
@@ -13,8 +16,10 @@ module.exports = (api, options, rootOptions) => {
 
   api.render({
     './public/index.html': './templates/public/index.html',
-    './npj.config.js': './templates/configs/npj.config.js',
-    './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js'
+    './npj.config.js': './templates/configs/npj.conf.js',
+    './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js',
+    './src/main.js': './templates/main.js',
+    './src/conf.js': './templates/conf.js',
   })
 
 }
