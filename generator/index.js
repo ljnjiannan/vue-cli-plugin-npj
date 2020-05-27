@@ -5,11 +5,15 @@ module.exports = (api, options, rootOptions) => {
       "vant": "^2.8.3",
       "lodash": "^4.17.15",
       "axios": "^0.19.2"
+    },
+    scripts: {
+      "dll": "webpack -p --progress --config ./webpack.dll.conf.js"
     }
   })
 
   api.render({
-    './src/Test.vue': './templates/test.vue'
+    './public/': './templates/public/*',
+    './': './templates/configs/*'
   })
 
 }
