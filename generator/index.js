@@ -14,7 +14,7 @@ module.exports = (api, options, rootOptions) => {
   api.render({
     './public/index.html': './templates/public/index.html',
     './npj.config.js': './templates/configs/npj.config.js',
-    './webpack.dll.conf.js': './templates/webpack.dll.conf.js'
+    './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js'
   })
 
 }
