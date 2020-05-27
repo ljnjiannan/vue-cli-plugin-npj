@@ -13,7 +13,7 @@ Vue.prototype._ = lodash
 Vue.prototype.$request = request
 Vue.prototype.$urls = request.urls
 
-module.exports = (App,prototype) => {
+export default (App,prototype) => {
   if (prototype.length) {
     prototype.map((value, key) => {
       Vue.prototype[key] = value

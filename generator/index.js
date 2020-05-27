@@ -5,7 +5,7 @@ var path = require('path')
 
 var renderDir = {
   './public/index.html': './templates/public/index.html',
-  './npj.config.js': './templates/configs/npj.conf.js',
+  './npj.conf.js': './templates/configs/npj.conf.js',
   './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js',
   './src/main.js': './templates/main.js',
   './src/conf.js': './templates/conf.js',

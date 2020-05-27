@@ -1,4 +1,6 @@
 import urls from './urls'
+import axios from 'axios'
+
 import {
   Toast
 } from 'vant';
@@ -14,7 +16,7 @@ const instance = axios.create({
   timeout: timeout
 });
 
-const request = (type) => {
+const request = (type, url, param) => {
   return new Promise((resolve, reject) => {
     instance[type](url, {
       ...param,
@@ -36,8 +38,16 @@ const request = (type) => {
   }) 
 }
 
+const get = (url, param) => {
+  return request('get', url,param)
+}
+
+const post = (url, param) => {
+  return request('post', url,param)
+}
+
 export default {
-  get: request('get'),
-  post: request('post'),
+  get,
+  post,
   urls
 }
