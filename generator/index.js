@@ -8,7 +8,6 @@ var renderDir = {
   './npj.conf.js': './templates/configs/npj.conf.js',
   './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js',
   './src/main.js': './templates/main.js',
-  './src/conf.js': './templates/conf.js',
   'src/request/index.js': 'templates/request/index.js',
   'src/request/urls.js': 'templates/request/urls.js'
 }
@@ -30,6 +29,7 @@ module.exports = (api, options, rootOptions) => {
     },
     devDependencies: {
       "clean-webpack-plugin": "^3.0.0",
+      "filemanager-webpack-plugin": "^2.0.5",
     },
     scripts: {
       "dll": "webpack -p --progress --config ./webpack.dll.conf.js"
