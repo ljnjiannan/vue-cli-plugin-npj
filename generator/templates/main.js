@@ -1,7 +1,10 @@
+import Vue from 'vue'
 import App from './App.vue'
 import lodash from 'lodash'
 import 'vant/lib/index.less'
 import request from './request'
+import router from './router'
+import store from './store'
 import {Button, Field, Picker, Popup, Dialog, Icon} from 'vant'
 
 Vue.use(Button)

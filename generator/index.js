@@ -25,7 +25,8 @@ module.exports = (api, options, rootOptions) => {
     dependencies: {
       "vant": "^2.8.3",
       "lodash": "^4.17.15",
-      "axios": "^0.19.2"
+      "axios": "^0.19.2",
+      "moment": "^2.24.0",
     },
     devDependencies: {
       "clean-webpack-plugin": "^3.0.0",
