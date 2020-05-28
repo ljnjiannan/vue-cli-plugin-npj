@@ -6,6 +6,7 @@ var path = require('path')
 var renderDir = {
   './public/index.html': './templates/public/index.html',
   './npj.conf.js': './templates/configs/npj.conf.js',
+  './vue.config.js': './templates/configs/vue.config.js',
   './webpack.dll.conf.js': './templates/configs/webpack.dll.conf.js',
   './src/main.js': './templates/main.js',
   'src/request/index.js': 'templates/request/index.js',
