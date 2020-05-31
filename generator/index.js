@@ -13,13 +13,6 @@ var renderDir = {
   'src/request/urls.js': 'templates/request/urls.js'
 }
 
-// var requestList = fs.readdirSync(requestDir);
-// for (var item of requestList) {
-//   var tarFile = path.join('./src/request',item)
-//   var srcFile = path.join(requestDir,item)
-//   renderDir[tarFile] = srcFile
-// }
-
 module.exports = (api, options, rootOptions) => {
   // 修改 `package.json` 里的字段
   api.extendPackage({
@@ -32,6 +25,7 @@ module.exports = (api, options, rootOptions) => {
     devDependencies: {
       "clean-webpack-plugin": "^3.0.0",
       "filemanager-webpack-plugin": "^2.0.5",
+      "compression-webpack-plugin": "^3.0.0",
     },
     scripts: {
       "dll": "webpack -p --progress --config ./webpack.dll.conf.js"
