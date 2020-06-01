@@ -6,5 +6,6 @@ module.exports = {
     'vant/es/popup',
     'vant/es/dialog',
     'vant/es/icon',
+    'vant/es/toast',
   ]
 }

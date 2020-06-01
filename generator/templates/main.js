@@ -5,7 +5,7 @@ import 'vant/lib/index.less'
 import request from './request'
 import router from './router'
 import store from './store'
-import {Button, Field, Picker, Popup, Dialog, Icon} from 'vant'
+import {Button, Field, Picker, Popup, Dialog, Icon,Toast} from 'vant'
 
 Vue.use(Button)
 Vue.use(Field)
@@ -13,6 +13,7 @@ Vue.use(Picker)
 Vue.use(Popup)
 Vue.use(Dialog)
 Vue.use(Icon)
+Vue.use(Toast)
 
 Vue.config.productionTip = false
 
