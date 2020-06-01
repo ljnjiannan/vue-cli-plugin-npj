@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const moment = require('moment')
 const FileManagerPlugin = require('filemanager-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
-
+const fs = require('fs')
 var name = require('./package.json').name
 
 module.exports = {
@@ -17,16 +17,20 @@ module.exports = {
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/
-      }),
-      new webpack.DllReferencePlugin({
-        context: process.cwd(),
-        manifest: require('./public/vendor/base-manifest.json')
-      }),
-      new webpack.DllReferencePlugin({
-        context: process.cwd(),
-        manifest: require('./public/vendor/vant_mini-manifest.json')
-      }),
+      })
     ]
+    if (fs.existsSync('./public/vendor/')) {
+      plugins.push(      
+        new webpack.DllReferencePlugin({
+          manifest: require('./public/vendor/base-manifest.json')
+        })
+      )
+      plugins.push(
+        new webpack.DllReferencePlugin({
+          manifest: require('vant_mini-manifest.json')
+        })
+      )
+    }
     if (process.env.NODE_ENV == 'production') {
       plugins.push(
         new FileManagerPlugin({  //初始化 filemanager-webpack-plugin 插件实例
