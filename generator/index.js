@@ -32,6 +32,6 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
-  api.render(renderDir)
+  api.render("./templates")
 
 }
