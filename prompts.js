@@ -1,14 +1,12 @@
-module.exports = api => {
-
-  api.injectPrompt({
+module.exports = [
+  // 选择创建单项目或者聚合项目
+  {
     name: 'projectMode',
     message: 'Choose project mode',
-    value: 'my-feature',
     type: 'list',
     choices: [
       'signle project',
       'multi project'
     ]
-  })
-
-}
+  }
+]
