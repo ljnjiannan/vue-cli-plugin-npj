@@ -1,4 +1,7 @@
 const FileManagerPlugin = require('filemanager-webpack-plugin')
+const webpack = require('webpack')
+const moment = require('moment')
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 module.exports = (api, projectOptions) => {
   api.configureWebpack(() => {

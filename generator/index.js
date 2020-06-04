@@ -12,8 +12,6 @@ module.exports = (api, options, rootOptions) => {
     },
     devDependencies: {
       "clean-webpack-plugin": "^3.0.0",
-      "filemanager-webpack-plugin": "^2.0.5",
-      "compression-webpack-plugin": "^3.0.0",
     },
     scripts: {
       "dll": "webpack -p --progress --config ./webpack.dll.conf.js",

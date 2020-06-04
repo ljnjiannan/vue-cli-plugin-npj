@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-npj",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.3"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^4.0.0",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "moment": "^2.26.0"
   }
 }
