@@ -11,7 +11,7 @@ module.exports = (api, options, rootOptions) => {
       "vuex": "^3.4.0"
     },
     devDependencies: {
-      "clean-webpack-plugin": "^3.0.0",
+      "clean-webpack-plugin": "^3.0.0"
     },
     scripts: {
       "dll": "webpack -p --progress --config ./webpack.dll.conf.js",
