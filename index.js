@@ -11,7 +11,6 @@ function productionCommand() {
   var agrs = process.env.npm_config_argv
   if (agrs) {
     var argv = JSON.parse(agrs).cooked
-    console.log(argv)
     if (argv && argv.length > 1 && argv[0] == 'run') {
       var command = argv[1]
       if (command && command.split('-').length) {
@@ -38,7 +37,6 @@ function productionCommand() {
 
 module.exports = (api, projectOptions) => {
   api.configureWebpack(() => {
-
     var plugins = [
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
@@ -59,7 +57,6 @@ module.exports = (api, projectOptions) => {
     }
 
     const date = moment().format('YYYYMMDDHHmmss');
-    const productionGzipExtensions = /\.(js|css|txt|json|html|ico|svg)(\?.*)?$/i
     const command = productionCommand()
     if (command.production) {
       plugins.push(
@@ -78,7 +75,7 @@ module.exports = (api, projectOptions) => {
         new CompressionWebpackPlugin({
           filename: '[path].gz[query]',
           algorithm: 'gzip',
-          test: productionGzipExtensions,
+          test: /\.(js|css|txt|json|html|ico|svg)(\?.*)?$/i,
           threshold: 10240,
           minRatio: 0.8
         })

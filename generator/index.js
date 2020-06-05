@@ -1,4 +1,11 @@
-
+const projectFilePaths = [
+  'App.vue',
+  'index.js',
+  'router.js',
+  'store.js',
+  'request/index.js',
+  'request/urls.js'
+]
 module.exports = (api, options, rootOptions) => {
   // 修改 `package.json` 里的字段
   api.extendPackage({
@@ -39,12 +46,12 @@ module.exports = (api, options, rootOptions) => {
       for (var item of projectFilePaths) {
         newFiles[`src/${projectName}/${item}`] = `./templates-new/${item}`
       }
-      api.render(newFiles)      
+      api.render(newFiles)
+      var scripts = {}
+      scripts[`serve-${projectName}`] = `vue-cli-service serve src/${projectName}`
+      scripts[`build-${projectName}`] = `vue-cli-service build src/${projectName}`
       api.extendPackage({
-        scripts: {
-          "serve-project": `vue-cli-service serve src/${projectName}`,
-          "build-project": `vue-cli-service build src/${projectName}`,
-        }
+        scripts
       })
     }
     
