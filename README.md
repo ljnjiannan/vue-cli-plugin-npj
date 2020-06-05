@@ -1,11 +1,38 @@
 # vue-cli-plugin-npj
-A vue project generator plugin
 
 ## 使用
 包含preset和generator
 ```
 vue create --preset ljnjiannan/vue-cli-plugin-npj <project-name>
 ```
+
+### 选择创建模式
+
+创建项目时有单项目和多项目聚合两种模式选择
+```
+? Choose project mode (Use arrow keys)
+❯ signle project 
+  multi project 
+  
+```
+#### 模式说明
+*单项目：*即传统的项目结构，只是在项目中集成了常用的组件和配置
+*多项目聚合：*即将多个相同类型的项目放在同一项目目录下，共用依赖、组件和资源文件等。使用场景举例：为多家医院开发流感调查表。调查表都会有相同的组件和相似的业务，但每家医院又有各自的需求。
+
+
+#### 为聚合项目添加子项目
+
+```
+// 在项目目录下运行
+yarn generator <sub-project-name>
+
+// 运行子项目
+yarn serve-<sub-project-name>
+// 编译打包子项目
+yarn build-<sub-project-name>
+```
+
+
 
 ## 项目结构说明
 ### 集成的第三方库
