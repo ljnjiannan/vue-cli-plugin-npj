@@ -4,10 +4,10 @@ const moment = require('moment')
 const path = require('path');
 const fs = require('fs')
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
-var name = require('./package.json').name
-
 
 function productionCommand() {
+  const pkg = process.VUE_CLI_SERVICE.pkg
+  const name = pkg.name
   var agrs = process.env.npm_config_argv
   if (agrs) {
     var argv = JSON.parse(agrs).cooked
